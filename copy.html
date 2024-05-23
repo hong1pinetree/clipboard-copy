@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to Clipboard</title>
+    <script>
+        function copyToClipboard() {
+            const text = "100-028-793754";
+            navigator.clipboard.writeText(text).then(function() {
+                alert("클립보드에 복사되었습니다: " + text);
+            }, function(err) {
+                console.error("클립보드 복사에 실패했습니다: ", err);
+            });
+        }
+    </script>
+</head>
+<body onload="copyToClipboard()">
+    <h1>텍스트가 클립보드에 복사되었습니다!</h1>
+</body>
+</html>
